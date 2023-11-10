@@ -1,61 +1,78 @@
 import styled from "styled-components";
 
-export const Main = styled.div`
-    width: 17%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: rgb(18,25,41);
-    background: linear-gradient(157deg, rgba(83,99,112,1) 0%, rgba(41,52,71,1) 50%, rgba(18,25,41,1) 100%);
-`
-export const Header = styled.div`
-    width: 100%;
-    height: 320px;
-`
-export const Logo = styled.div`
-    width: 160px;
-    height: 160px;
-    background-color: black;
-    border-radius: 50%;
-    margin: auto;
-    margin-top: 40px;
-`
-export const H3 = styled.h3`
-    font-weight: 400;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    margin: 6px;
-`
 export const Nav = styled.div`
-    width: 100%;
-    height:100%;
+    height: 100vh;
+    width: 220px;
+    background-color: #FFFFFF;
+    padding: 40px 0 40px 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 `
-export const Ul = styled.ul`
-    display: flex;
-    flex-direction: column;
-    margin-top: 90px;
-    :hover{
-        background-color: rgba(160, 161, 160, 0.2);
-        transition: 0.8s;
-    }
+export const BoxImg = styled.div`
+   width: 100%;
+   height: 50px;
+   background-color: red;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 `
-export const A = styled.a`
+export const Img = styled.image`
+   width: 170px;
+   height: 50px;
+   background-color: black;
+`
+export const Button= styled.button`
+   background-color: transparent;
+   border:1px solid white;
+   color: white;
+   padding: 2px 4px;
+   cursor: pointer;
+`
+export const Li = styled.li`
+`
+export const A = styled.a`     
+    color: #5A7482; 
+    font-size: 19px;
     display: flex;
     align-items: center;
-    margin-top: 5px;
-    padding-left: 25px;
-    :hover{
-        background-color: transparent;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 3px;
+`
+export const Span = styled.span`  
+    margin-left: 21px;
+`
+export const SpanAdd = styled.span`  
+    margin-left: 18px;
+`
+export const Logo = styled.span`  
+    margin-left: 0;
+    font-size: 22px;
+    font-weight: bold;
+`
+export const SpanIcon = styled.span`  
+`
+export const ButtonAdd = styled.button` 
+    width: 140px;
+    height: 55px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 19px;
+    background-color: #6515DD;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg{
+        background-color: #6515DD;
+        border-radius: 50%;
+        padding: 6px;
     }
 `
-export const Li = styled.span`
-    color: #FCFBFA;
-    font-size: 18px;
-    margin: 13px;
-    font-weight: 400;
-    :hover{
-        background-color: transparent;
-    }
+export const Al = styled.span`  
+    flex: 1;
 `

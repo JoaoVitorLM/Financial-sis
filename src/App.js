@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "./pages/home";
+import Rotas from "./routes/router";
 
 export default function App() {
   return(
     <>
-      <Home/>
+      <Rotas/>
     </>
   )
 }

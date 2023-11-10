@@ -8,7 +8,7 @@ export const Main = styled.div`
 export const Body = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #DFDFE3;
+    background-color: #EDF3FB;
 `
 export const BoxGrid = styled.div`
     max-width: 1100px;

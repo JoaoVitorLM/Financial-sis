@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
+export const Main = styled.div`
+    width: 100%;
+`
 export const BoxInput = styled.div`
-    width: 1100px;
-    height: 100px;
-    margin-left: 105px;
-    margin-top: 17px;
-    box-shadow: 0px 0px 4px 2px rgb(83,99,112);
+    max-width: 1100px;
+    min-height: 100px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px 2px;
     border-radius: 9px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin: auto;
+    margin-top: 17px;
 `
 export const Input = styled.input`
     width: 260px;

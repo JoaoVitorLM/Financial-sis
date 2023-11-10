@@ -1,7 +1,6 @@
 import React from "react";
-import { BoxES, BoxInput, Button, Checkbox, Input } from "./styles";
+import { BoxES, BoxInput, Button, Checkbox, Input, Main } from "./styles";
 import { useState } from "react";
-import Grid from "../Grid";
 
 
 export default function BoxForm({ handleAdd, transactionsList, setTransactionsList }) {
@@ -35,6 +34,7 @@ export default function BoxForm({ handleAdd, transactionsList, setTransactionsLi
 
     return (
         <>
+        <Main>
             <BoxInput>
                 <div>
                     <h3>Descrição</h3>
@@ -70,7 +70,7 @@ export default function BoxForm({ handleAdd, transactionsList, setTransactionsLi
                 </BoxES>
                 <Button onClick={handleSave}>adicionar</Button>
             </BoxInput>
-            <Grid itens={transactionsList} setItens={setTransactionsList}/>
+        </Main>
         </>
     )
 }

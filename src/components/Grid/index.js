@@ -1,5 +1,5 @@
 import React from "react";
-import { BoxGrid, Container, Title } from "./styles";
+import { BoxGrid, Container, Main, Title } from "./styles";
 import GridItem from "../GridItem";
 
 export default function Grid({ itens, setItens }) {
@@ -10,6 +10,7 @@ export default function Grid({ itens, setItens }) {
     }
     return (
         <>
+        <Main>
             <BoxGrid>
                 <Container>
                     <Title>Descrição</Title>
@@ -22,6 +23,7 @@ export default function Grid({ itens, setItens }) {
                     ))}
                 </div>
             </BoxGrid>
+        </Main>  
         </>
     )
 }

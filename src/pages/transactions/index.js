@@ -1,16 +1,10 @@
-import React from "react";
-import { Body, Main} from "./styles";
+import React, { useState, useEffect } from "react";
 import SideBar from "../../components/Sidebar";
-import BoxValues from "../../components/BoxValue";
-import { useEffect, useState } from "react";
-
-import BoxForm from "../../components/Boxform";
-import Title from "../../components/Header";
+import { Section } from "./styles";
+import Grid from "../../components/Grid";
 import Header from "../../components/Header";
 
-
-
-export default function Dash() {
+export default function Transaction() {
     const data = localStorage.getItem("transactions");
     const [transactionsList, setTransactionsList] = useState(
       data ? JSON.parse(data) : []
@@ -45,22 +39,15 @@ export default function Dash() {
   
       localStorage.setItem("transactions", JSON.stringify(newArrayTransactions));
     };
-  
-    return (
+
+
+    return(
         <>
-            <Main>
-                <Header name="Dashboard"/>
-                <SideBar />
-                <Body>
-                  <Title name={"Dashboard"}/>
-                    <BoxValues income={income} expense={expense} total={total} />
-                   <BoxForm 
-                      handleAdd={handleAdd}
-                      transactionsList={transactionsList}
-                      setTransactionsList={setTransactionsList}
-                    />
-                </Body>
-            </Main>
+        <Header name='Transações'/>
+        <SideBar/>
+        <Section >
+        <Grid itens={transactionsList} setItens={setTransactionsList}/>
+        </Section>
         </>
     )
 }
