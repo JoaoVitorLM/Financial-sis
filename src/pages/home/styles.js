@@ -8,7 +8,6 @@ export const Main = styled.div`
 export const Body = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: #EDF3FB;
 `
 export const BoxGrid = styled.div`
     max-width: 1100px;
@@ -19,6 +18,17 @@ export const BoxGrid = styled.div`
     margin-top: 26px;
     border-radius: 9px;
 `
+export const BoxChart = styled.div`
+    max-width: 800px;
+    height: 450px;
+    margin: auto;
+    margin-top: 50px; 
+    
+    @media screen and (max-width: 880px) {
+        max-width: 500px;
+    }
+`
+
 
 
 

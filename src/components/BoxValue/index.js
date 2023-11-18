@@ -21,7 +21,7 @@ export default function BoxValues({ income, expense, total }) {
                 </Box>
                 <Box>
                     <H3>Balanço</H3>
-                    <P>{ total}</P>
+                    <P>{total}</P>
                     <Icon><FaBalanceScale  size={39} color="grey"/></Icon>
                 </Box>
             </BoxValue>

@@ -68,7 +68,7 @@ export default function BoxForm({ handleAdd, transactionsList, setTransactionsLi
                     onChange={() => setExpense(!isExpense)} 
                     />
                 </BoxES>
-                <Button onClick={handleSave}>adicionar</Button>
+                <Button onClick={handleSave}>Adicionar</Button>
             </BoxInput>
         </Main>
         </>

@@ -1,19 +1,25 @@
+import React from 'react'
+import { A, Container, Content, Li, Logout, Span, SpanIcon, Ul } from './styles'
 import { AiOutlineDashboard, AiOutlineLogout, AiOutlineCalendar, AiFillSignal} from "react-icons/ai";
-import { HiBars3CenterLeft } from "react-icons/hi2";
 import { FaTimes} from 'react-icons/fa'
-import { A, BoxLogo, Li, Logout, Nav, Span, SpanIcon, Ul} from "./styles";
+import { HiBars3CenterLeft } from "react-icons/hi2";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
 
-export default function SideBar({active}) {
+const SidebarMobal = ({ active }) => {
     const { signout } = useAuth();
     const navigate = useNavigate();
 
-    return(
-      <Nav> 
-            <BoxLogo><AiFillSignal size={40} /></BoxLogo>
-        <Ul>
+    const closeSidebar = () => {
+        active(false)
+    }
+
+  return (
+    <Container sidebar={active}>
+      <FaTimes onClick={closeSidebar} />  
+      <Content>
+      <Ul>
             <Li>
                 <A href="/">
                     <SpanIcon><AiOutlineDashboard size={39} /></SpanIcon>
@@ -41,6 +47,9 @@ export default function SideBar({active}) {
                 </Li>
             </Logout>
         </Ul>
-      </Nav>
-    )
+      </Content>
+    </Container>
+  )
 }
+
+export default SidebarMobal

@@ -1,31 +1,41 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Nav = styled.div`
-    height: 100vh;
-    width: 78px;
-    box-shadow: 1px 0 5px #820ABF;
-    overflow: hidden;
+export const Container = styled.div`
+  background-color: #171923;
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  left: ${props => props.sidebar ? '0' : '-100%'};
+  animation: showSidebar .4s;
 
-    &:hover{
-        width: 220px;
-        transition: all 0.7s;
+  > svg {
+    position: fixed;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-top: 32px;
+    margin-left: 32px;
+    cursor: pointer;
+  }
+
+  @keyframes showSidebar {
+    from {
+      opacity: 0;
+      width: 0;
     }
-
-    @media screen and (max-width: 1130px) {
-        display: none;
+    to {
+      opacity: 1;
+      width: 300px;
     }
-`
-export const BoxLogo = styled.div`
-   width: 65px;
-   height: 65px;
-   border-radius: 50%;
-   background-color: #820ABF;
-   margin-top: 33px;
-   margin-left: 5px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-`
+  }
+`;
+
+export const Content = styled.div`
+  margin-top: 100px;
+`;
+
 export const Ul = styled.ul`
     margin-left: 16px;
 `
@@ -70,5 +80,5 @@ export const Al = styled.span`
     flex: 1;
 `
 export const Logout = styled.div`  
-    margin-top: 570px;
+    margin-top: 400px;
 `

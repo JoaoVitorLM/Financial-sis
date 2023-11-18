@@ -6,18 +6,23 @@ export const Main = styled.div`
 export const BoxGrid = styled.div`
     max-width: 1100px;
     min-height: 500px;
-    background-color: #FFFFFF;
     box-shadow: 0px 0px 4px 2px ;
     border-radius: 9px;
     margin: auto;
     margin-top: 26px;
+
+    @media screen and (max-width: 1500px) {
+        max-width: 800px;
+    }
+    @media screen and (max-width: 880px) {
+        max-width: 500px;
+    }
 `
 export const Container = styled.div`
     width: 100%;
     height: 40px;
     border-bottom: 2px solid black;
     border-radius: 10px;
-    display: flex;
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -1,17 +1,16 @@
 import React from "react";
-import { Body, Main} from "./styles";
+import { Body, BoxChart, Main} from "./styles";
 import SideBar from "../../components/Sidebar";
 import BoxValues from "../../components/BoxValue";
 import { useEffect, useState } from "react";
-
 import BoxForm from "../../components/Boxform";
-import Title from "../../components/Header";
 import Header from "../../components/Header";
-
-
+import ChartComponent  from "../../components/Charts/index";
+import HeaderMobal from "../../components/MobalHeader/index"
 
 export default function Dash() {
     const data = localStorage.getItem("transactions");
+    console.log(data)
     const [transactionsList, setTransactionsList] = useState(
       data ? JSON.parse(data) : []
     );
@@ -45,22 +44,25 @@ export default function Dash() {
   
       localStorage.setItem("transactions", JSON.stringify(newArrayTransactions));
     };
-  
+    
     return (
         <>
             <Main>
-                <Header name="Dashboard"/>
-                <SideBar />
+                <SideBar/>
+                <HeaderMobal />
                 <Body>
-                  <Title name={"Dashboard"}/>
+                  <Header name={"Dashboard"}/>
                     <BoxValues income={income} expense={expense} total={total} />
                    <BoxForm 
                       handleAdd={handleAdd}
                       transactionsList={transactionsList}
                       setTransactionsList={setTransactionsList}
                     />
+                    <BoxChart>
+                        <ChartComponent/>
+                    </BoxChart>
                 </Body>
             </Main>
         </>
     )
-}
+};
