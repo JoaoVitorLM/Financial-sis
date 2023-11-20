@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 import ChartComponent  from "../../components/Charts/index";
 import HeaderMobal from "../../components/MobalHeader/index"
 
-export default function Dash() {
+export default function Home() {
     const data = localStorage.getItem("transactions");
     console.log(data)
     const [transactionsList, setTransactionsList] = useState(

@@ -15,7 +15,7 @@ export default function SideBar({active}) {
             <BoxLogo><AiFillSignal size={40} /></BoxLogo>
         <Ul>
             <Li>
-                <A href="/">
+                <A href="/home">
                     <SpanIcon><AiOutlineDashboard size={39} /></SpanIcon>
                     <Span>Dashboard</Span>
                 </A>

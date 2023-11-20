@@ -29,7 +29,7 @@ export default function Signin() {
       return;
     }
 
-    navigate("/");
+    navigate("/home");
   };
 
   return (
