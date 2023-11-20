@@ -19,9 +19,8 @@ export default function Rotas() {
     return(
         <>
             <Routes>
-                <Route element={<Home/>} path="/home"/>
-                <Route element={<Transaction/>} path="transações"/>
-                <Route element={<CalendarPage/>} path="calendário"/>
+                <Route element={<Transaction/>} path="transacoes"/>
+                <Route element={<CalendarPage/>} path="calendario"/>
                 <Route exact path="/home" element={<Private Item={Home}/>} />
                 <Route path="/" element={<Signin />} />
                 <Route exact path="/signup" element={<Signup />} />
