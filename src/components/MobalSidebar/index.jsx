@@ -1,6 +1,6 @@
 import React from 'react'
 import { A, Container, Content, Li, Logout, Span, SpanIcon, Ul } from './styles'
-import { AiOutlineDashboard, AiOutlineLogout, AiOutlineCalendar, AiFillSignal} from "react-icons/ai";
+import { AiOutlineDashboard, AiOutlineLogout, AiOutlineCalendar} from "react-icons/ai";
 import { FaTimes} from 'react-icons/fa'
 import { HiBars3CenterLeft } from "react-icons/hi2";
 import useAuth from "../../hooks/useAuth";

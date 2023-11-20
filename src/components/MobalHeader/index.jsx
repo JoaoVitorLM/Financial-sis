@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from './styles'
 import { FaBars } from 'react-icons/fa'
-import Sidebar from "../Sidebar/index"
 import SidebarMobal from '../MobalSidebar'
 
 
