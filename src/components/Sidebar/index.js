@@ -34,7 +34,7 @@ export default function SideBar({active}) {
             </Li>
             <Logout>
                 <Li>
-                    <A href="" Text="Sair" onClick={() => [signout(), navigate("/*")]}>
+                    <A href="" Text="Sair" onClick={() => [signout(), navigate("/")]}>
                         <SpanIcon><AiOutlineLogout size={33}/></SpanIcon>
                         <Span>Sair</Span>
                     </A>

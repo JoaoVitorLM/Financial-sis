@@ -9,7 +9,7 @@ import Home from "../pages/home";
 
 
 const Private = ({ Item }) => {
-    const {signed} = useAuth;
+    const { signed } = useAuth();
   
     return signed > 0 ? <Item /> : <Signin />;
   };
