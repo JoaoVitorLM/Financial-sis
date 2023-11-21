@@ -12,7 +12,7 @@ const ChartComponent = () => {
 
   const renderChart = () => {
     const data = localStorage.getItem("transactions");
-    const parsedata = JSON.parse(data);
+    const parsedata = JSON.parse(data)??[];
     console.log(parsedata)
     const entryamount = parsedata.filter(value => !value.expense).map(item => +item.amount)
     const expenseamount = parsedata.filter(value => value.expense).map(item => +item.amount)
